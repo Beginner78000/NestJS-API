@@ -7,6 +7,6 @@ import { ConfigModule } from '@nestjs/config';
 
 // Module decorator is a function that submit data to a class
 @Module({
-  imports: [AuthModule, UserModule, BookmarkModule, PrismaModule, ConfigModule.forRoot({isGlobal: true})],
+  imports: [ConfigModule.forRoot({isGlobal: true}), AuthModule, UserModule, BookmarkModule, PrismaModule],
 })
 export class AppModule {}
